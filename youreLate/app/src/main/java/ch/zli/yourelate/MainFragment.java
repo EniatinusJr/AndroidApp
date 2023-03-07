@@ -36,6 +36,14 @@ public class MainFragment extends Fragment {
                         .navigate(R.id.action_FirstFragment_to_SecondFragment);
             }
         });
+
+        binding.buttonTime.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(MainFragment.this)
+                        .navigate(R.id.action_FirstFragment_to_timeFragment);
+            }
+        });
     }
 
     @Override
