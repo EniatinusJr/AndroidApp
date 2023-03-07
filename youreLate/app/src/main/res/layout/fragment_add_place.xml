@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddPlaceFragment" >
+    tools:context=".AddPlaceFragment"
+    android:background="#494949">
 
     <TextView
         android:id="@+id/textView"
@@ -15,6 +16,7 @@
         android:layout_marginEnd="108dp"
         android:text="X-Koordinate"
         android:textAlignment="center"
+        android:textColor="#FFFFFF"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,6 +31,7 @@
         android:layout_marginEnd="101dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:textColor="#FBFBFB"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -42,6 +45,7 @@
         android:layout_marginEnd="109dp"
         android:text="Y-Koordinate"
         android:textAlignment="center"
+        android:textColor="#FFFFFF"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -56,6 +60,7 @@
         android:layout_marginEnd="101dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
@@ -69,6 +74,7 @@
         android:layout_marginEnd="96dp"
         android:text="Anzeige Name"
         android:textAlignment="center"
+        android:textColor="#FFFFFF"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -83,6 +89,7 @@
         android:layout_marginEnd="101dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
