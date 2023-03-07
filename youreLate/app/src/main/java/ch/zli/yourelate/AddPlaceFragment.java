@@ -1,19 +1,21 @@
 package ch.zli.yourelate;
 
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import ch.zli.yourelate.databinding.FragmentAddPlaceBinding;
 import ch.zli.yourelate.databinding.FragmentSecondBinding;
 
-public class PlaceFragment extends Fragment {
+public class AddPlaceFragment extends Fragment {
 
-    private FragmentSecondBinding binding;
+    private FragmentAddPlaceBinding binding;
 
     @Override
     public View onCreateView(
@@ -21,18 +23,17 @@ public class PlaceFragment extends Fragment {
             Bundle savedInstanceState
     ) {
 
-        binding = FragmentSecondBinding.inflate(inflater, container, false);
+        binding = FragmentAddPlaceBinding.inflate(inflater, container, false);
         return binding.getRoot();
-
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        binding.buttonAdd.setOnClickListener(new View.OnClickListener() {
+        binding.buttonAddPlace.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavHostFragment.findNavController(PlaceFragment.this)
+                NavHostFragment.findNavController(AddPlaceFragment.this)
                         .navigate(R.id.action_SecondFragment_to_FirstFragment);
             }
         });
@@ -43,5 +44,4 @@ public class PlaceFragment extends Fragment {
         super.onDestroyView();
         binding = null;
     }
-
 }
