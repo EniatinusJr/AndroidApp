@@ -13,68 +13,83 @@
         android:layout_height="53dp"
         android:layout_marginStart="120dp"
         android:layout_marginEnd="121dp"
+        android:layout_marginBottom="17dp"
         android:text="Ort ändern"
+        app:layout_constraintBottom_toTopOf="@+id/button_time"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="418dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button_time"
         android:layout_width="170dp"
         android:layout_height="53dp"
         android:layout_marginStart="120dp"
-        android:layout_marginTop="48dp"
         android:layout_marginEnd="121dp"
         android:layout_marginBottom="190dp"
         android:text="Uhrzeit ändern"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_place" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="153dp"
         android:text="Uhrzeit"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="34sp"
-        tools:layout_editor_absoluteX="152dp"
-        tools:layout_editor_absoluteY="225dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/place" />
 
     <TextView
         android:id="@+id/textview_first"
         android:layout_width="347dp"
         android:layout_height="46dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="123dp"
+        android:layout_marginEnd="32dp"
         android:text="Zu verlassender Ort"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="34sp"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="123dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/place"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="202dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="203dp"
         android:text="-"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="202dp"
-        tools:layout_editor_absoluteY="184dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_first" />
 
     <TextView
         android:id="@+id/time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="202dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="203dp"
         android:text="-"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="202dp"
-        tools:layout_editor_absoluteY="292dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
