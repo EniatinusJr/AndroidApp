@@ -9,9 +9,15 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 import ch.zli.yourelate.databinding.FragmentSecondBinding;
 
 public class PlaceFragment extends Fragment {
+
+    private HashMap<String, Double> xcoordinates = new HashMap<>();
+    private HashMap<String, Double> ycoordinates = new HashMap<>();
 
     private FragmentSecondBinding binding;
 
@@ -44,6 +50,20 @@ public class PlaceFragment extends Fragment {
                         .navigate(R.id.action_SecondFragment_to_FirstFragment);
             }
         });
+    }
+
+    public void addData(String name, double longitude, double latitude) {
+        xcoordinates.put(name, longitude);
+        ycoordinates.put(name,latitude);
+    }
+
+    public String getData(String name) {
+        double longitude = xcoordinates.get(name);
+        double latitude = ycoordinates.get(name);
+
+        String coordinate = longitude + ", " + latitude;
+
+        return coordinate;
     }
 
     @Override

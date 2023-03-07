@@ -14,6 +14,7 @@ import ch.zli.yourelate.databinding.FragmentAddPlaceBinding;
 import ch.zli.yourelate.databinding.FragmentSecondBinding;
 
 public class AddPlaceFragment extends Fragment {
+    PlaceFragment placeFragment = new PlaceFragment();
 
     private FragmentAddPlaceBinding binding;
 
@@ -33,6 +34,7 @@ public class AddPlaceFragment extends Fragment {
         binding.buttonAddPlace.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                placeFragment.addData(binding.name.getText().toString(), Double.parseDouble(binding.xcoordinates.getText().toString()), Double.parseDouble(binding.ycoordinates.getText().toString()));
                 NavHostFragment.findNavController(AddPlaceFragment.this)
                         .navigate(R.id.action_addPlaceFragment_to_SecondFragment);
             }
