@@ -29,14 +29,14 @@ public class TimeFragment extends Fragment {
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        /*
-        binding.buttonFirst.setOnClickListener(new View.OnClickListener() {
+
+        binding.buttonChangeTime.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 NavHostFragment.findNavController(TimeFragment.this)
-                        .navigate(R.id.action_FirstFragment_to_SecondFragment);
+                        .navigate(R.id.action_timeFragment_to_FirstFragment);
             }
-        });*/
+        });
     }
 
     @Override
