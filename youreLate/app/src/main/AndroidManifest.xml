@@ -11,6 +11,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.YoureLate"
         tools:targetApi="31">
+        <service
+            android:name=".SensorService"
+            android:enabled="true"
+            android:exported="true"></service>
+        <service
+            android:name=".DataService"
+            android:enabled="true"
+            android:exported="true" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
