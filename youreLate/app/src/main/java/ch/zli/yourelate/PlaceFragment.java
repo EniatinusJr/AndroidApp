@@ -33,6 +33,14 @@ public class PlaceFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 NavHostFragment.findNavController(PlaceFragment.this)
+                        .navigate(R.id.action_SecondFragment_to_addPlaceFragment);
+            }
+        });
+
+        binding.buttonPlace1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(PlaceFragment.this)
                         .navigate(R.id.action_SecondFragment_to_FirstFragment);
             }
         });
