@@ -61,7 +61,7 @@ public class PlaceFragment extends Fragment {
         double longitude = xcoordinates.get(name);
         double latitude = ycoordinates.get(name);
 
-        String coordinate = longitude + ", " + latitude;
+        String coordinate = longitude + "," + latitude;
 
         return coordinate;
     }
