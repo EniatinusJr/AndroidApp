@@ -10,10 +10,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+
 import ch.zli.yourelate.databinding.FragmentFirstBinding;
 import ch.zli.yourelate.databinding.FragmentTimeBinding;
 
 public class TimeFragment extends Fragment {
+    MainFragment mainFragment = new MainFragment();
 
     private FragmentTimeBinding binding;
 
@@ -33,6 +37,8 @@ public class TimeFragment extends Fragment {
         binding.buttonChangeTime.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                LocalTime newTime = LocalTime.parse(binding.changetime.getText().toString());
+                mainFragment.setTime(newTime);
                 NavHostFragment.findNavController(TimeFragment.this)
                         .navigate(R.id.action_timeFragment_to_FirstFragment);
             }

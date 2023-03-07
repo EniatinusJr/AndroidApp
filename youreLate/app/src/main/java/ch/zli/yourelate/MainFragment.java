@@ -76,6 +76,11 @@ public class MainFragment extends Fragment {
         binding = null;
     }
 
+    public void setLocation(String name, double longitude, double latitude) {
+        binding.place.setText(name);
+        setLongitude(longitude);
+        setLatitude(latitude);
+    }
     public String getName() {
         return name;
     }
@@ -99,5 +104,6 @@ public class MainFragment extends Fragment {
     }
     public void setTime(LocalTime time) {
         this.time = time;
+        binding.time.setText(String.valueOf(time));
     }
 }
