@@ -1,5 +1,7 @@
 package ch.zli.yourelate;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -17,6 +19,7 @@ public class AddPlaceFragment extends Fragment {
     PlaceFragment placeFragment = new PlaceFragment();
 
     private FragmentAddPlaceBinding binding;
+    private SharedPreferences sharedPreferences;
 
     @Override
     public View onCreateView(
@@ -25,6 +28,7 @@ public class AddPlaceFragment extends Fragment {
     ) {
 
         binding = FragmentAddPlaceBinding.inflate(inflater, container, false);
+        sharedPreferences = getActivity().getPreferences(Context.MODE_PRIVATE);
         return binding.getRoot();
     }
 
@@ -35,6 +39,12 @@ public class AddPlaceFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 placeFragment.addData(binding.name.getText().toString(), Double.parseDouble(binding.xcoordinates.getText().toString()), Double.parseDouble(binding.ycoordinates.getText().toString()));
+                String names = sharedPreferences.getString("names", "");
+                System.out.println(names);
+                names.concat("$").concat(binding.name.getText().toString());
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString("names", names);
+                editor.apply();
                 NavHostFragment.findNavController(AddPlaceFragment.this)
                         .navigate(R.id.action_addPlaceFragment_to_SecondFragment);
             }
